@@ -1,0 +1,63 @@
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,QSize, Qt)
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import (QLabel, QListView, QPushButton,)
+
+class Ui_Uniter(object):
+    def setupUi(self, Uniter):
+        if not Uniter.objectName():
+            Uniter.setObjectName(u"Uniter")
+        Uniter.resize(800, 500)
+        Uniter.setMinimumSize(QSize(800, 500))
+        Uniter.setMaximumSize(QSize(800, 500))
+        self.LoadButton = QPushButton(Uniter)
+        self.LoadButton.setObjectName(u"LoadButton")
+        self.LoadButton.setGeometry(QRect(470, 450, 93, 29))
+        self.SaveButton = QPushButton(Uniter)
+        self.SaveButton.setObjectName(u"SaveButton")
+        self.SaveButton.setGeometry(QRect(580, 450, 93, 29))
+        self.CancelButton = QPushButton(Uniter)
+        self.CancelButton.setObjectName(u"CancelButton")
+        self.CancelButton.setGeometry(QRect(690, 450, 93, 29))
+        self.AddButton = QPushButton(Uniter)
+        self.AddButton.setObjectName(u"AddButton")
+        self.AddButton.setGeometry(QRect(500, 90, 93, 29))
+        self.listView = QListView(Uniter)
+        self.listView.setObjectName(u"listView")
+        self.listView.setGeometry(QRect(210, 70, 271, 271))
+        self.DeleteButton = QPushButton(Uniter)
+        self.DeleteButton.setObjectName(u"DeleteButton")
+        self.DeleteButton.setGeometry(QRect(500, 130, 93, 29))
+        self.UniterLabel = QLabel(Uniter)
+        self.UniterLabel.setObjectName(u"UniterLabel")
+        self.UniterLabel.setGeometry(QRect(350, 10, 101, 31))
+        font = QFont()
+        font.setPointSize(14)
+        self.UniterLabel.setFont(font)
+        self.UniterLabel.setAlignment(Qt.AlignCenter)
+        self.UpButton = QPushButton(Uniter)
+        self.UpButton.setObjectName(u"UpButton")
+        self.UpButton.setGeometry(QRect(500, 250, 93, 29))
+        self.DownButton = QPushButton(Uniter)
+        self.DownButton.setObjectName(u"DownButton")
+        self.DownButton.setGeometry(QRect(500, 290, 93, 29))
+        self.HSPButton = QPushButton(Uniter)
+        self.HSPButton.setObjectName(u"HSPButton")
+        self.HSPButton.setGeometry(QRect(500, 190, 93, 29))
+
+        self.retranslateUi(Uniter)
+
+        QMetaObject.connectSlotsByName(Uniter)
+    # setupUi
+
+    def retranslateUi(self, Uniter):
+        Uniter.setWindowTitle(QCoreApplication.translate("Uniter", u"Uniter", None))
+        self.LoadButton.setText(QCoreApplication.translate("Uniter", u"Load", None))
+        self.SaveButton.setText(QCoreApplication.translate("Uniter", u"Save", None))
+        self.CancelButton.setText(QCoreApplication.translate("Uniter", u"Cancel", None))
+        self.AddButton.setText(QCoreApplication.translate("Uniter", u"Add", None))
+        self.DeleteButton.setText(QCoreApplication.translate("Uniter", u"Delete", None))
+        self.UniterLabel.setText(QCoreApplication.translate("Uniter", u"Uniter", None))
+        self.UpButton.setText(QCoreApplication.translate("Uniter", u"Up", None))
+        self.DownButton.setText(QCoreApplication.translate("Uniter", u"Down", None))
+        self.HSPButton.setText(QCoreApplication.translate("Uniter", u"Show path", None))
+    # retranslateUi
